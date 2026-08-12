@@ -92,13 +92,15 @@ In Short: **Event happens → JavaScript detects it → JavaScript runs some cod
 ## stopPropagation()
 
 Sometimes we don't want the event to continue travelling so, we use stopPropagation()
+
 -> ```child.addEventListener("click", (event) => {
           event.stopPropagation();
           console.log("Button clicked");
       });```
+      
 Now when we click the **button** the event will not reach it's parent.
 
-# JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)
+### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)
 
 
 

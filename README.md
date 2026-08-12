@@ -11,16 +11,17 @@
 
 ## Events Handling Function:
 **=> " addEventListener() is the most common way to handle events. "**
--> element.addEventListener("event", function () {
+
+-> ```element.addEventListener("event", function () {
          // code to execute
-    });
+    });```
     
 #### For Example:
--> const button = document.querySelector("#button");
 
-   button.addEventListener("click", () => {
-       alert("Hello!");
-   });
+-> ```const button = document.querySelector("#button");
+      button.addEventListener("click", () => {
+            alert("Hello!");
+      });```
 
 In Short: **Event happens → JavaScript detects it → JavaScript runs some code**
 
@@ -51,9 +52,10 @@ In Short: **Event happens → JavaScript detects it → JavaScript runs some cod
 **=> " When an event occurs, JavaScript gives your function an event object containing information about what happened. "**
 
 #### For Example:
--> button.addEventListener("click", (event) => {
-       console.log(event);
-   });
+
+-> ```button.addEventListener("click", (event) => {
+          console.log(event);
+      });```
 
 **- We can use to find information such as:**
    
@@ -74,29 +76,26 @@ In Short: **Event happens → JavaScript detects it → JavaScript runs some cod
 - even if we don't write it **false** is the default behaviour.
 
 #### For Example:
--> child.addEventListener("click", (event) => {
-      console.log("Button clicked");
-      
-   }, false);
+-> ```child.addEventListener("click", (event) => {
+           console.log("Button clicked");   
+      }, false);```
   
 #### 2.Capturing Phase:
 - The event travels from the outermost element toward the element that was clicked.
 - JavaScript can detect it if we write **true** in the code.
 
 #### For Example:
--> child.addEventListener("click", (event) => {
-      console.log("Button clicked");
-      
-   }, true);
+-> ```child.addEventListener("click", (event) => {
+           console.log("Button clicked");
+       }, true);```
 
 ## stopPropagation()
 
 Sometimes we don't want the event to continue travelling so, we use stopPropagation()
--> child.addEventListener("click", (event) => {
-      event.stopPropagation();
-      console.log("Button clicked");
-      
-  });
+-> ```child.addEventListener("click", (event) => {
+          event.stopPropagation();
+          console.log("Button clicked");
+      });```
 Now when we click the **button** the event will not reach it's parent.
 
 # JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)

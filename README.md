@@ -100,16 +100,16 @@ Sometimes we don't want the event to continue travelling so, we use stopPropagat
       
 Now when we click the **button** the event will not reach it's parent.
 
-### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)
+### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/EXERCISE-1/index.html)
 
 # Async JavaScript fundamentals:
 #### " JavaScript is a synchronous language. "
 - JavaScript itself is primarily **single-threaded** and **synchronous**.
 - JavaScript can perform **asynchronous** operations using features provided by its environment, such as the browser or Node.js.
-- 
-## setTimeout() and setInterval():
+
+## setTimeout( ) and setInterval( ):
 - These operations are asynchronous operations and can be performed by JavaScript
-- #### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [EXERCISE-2](******)
+- #### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [EXERCISE-2](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/EXERCISE-2/index.html)
 
 ## JavaScript async Functions:
 **=> " async function is a function that can perform a task that takes some time without stopping the rest of the program from continuing. "**
@@ -155,7 +155,7 @@ Now when we click the **button** the event will not reach it's parent.
 
 - Here await fetch ( ... ) means to wait for **fetch()** to complete, then put its result inside *response*.
 - The need for **async and await** is for one of the most common uses in **fetching data from an API**.
-- we generally use await inside an async function.
+- We generally use await inside an async function.
 
 
 

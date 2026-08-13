@@ -135,15 +135,60 @@ Now when we click the **button** the event will not reach it's parent.
 ### What is a Promise?
 **=> " A Promise represents a value that we don't have right now, but will have later. "**
 - It goes like this:
-   You request data
-      ↓
-   Promise
-      ↓
-   Waiting...
-      ↓
-Server responds
-      ↓
-Success / Failure
+   - You request data ↓
+   - Promise ↓
+   - Waiting... ↓
+   - Server responds ↓
+   - Success / Failure
+ 
+## States of Promise"
+- A Promise has three possible states:
+   - **pending**: Operation is still running
+   - **fulfilled**: Operation succeeded
+   - **rejected**: Operation failed
+
+### A Basic Syntax in creating a Promise:
+
+-> ```const promise = new Promise((resolve, reject) => {
+    // asynchronous operation
+     resolve();
+    });```
+
+    
+- The Promise constructor receives a function called the executor function.
+- Inside it, you get two functions: **1.resolve() → Success 2.reject()  → Failure**
+
+#### For Example:
+
+-> ```const promise = new Promise((resolve, reject) => {
+          let success = true;
+          if (success) {
+               resolve("Operation successful!");
+          } else {
+               reject("Operation failed!");
+          }
+      });```
+
+- If success is **true**, the Promise becomes **fulfilled**
+- If it's false then **rejected**
+
+## 1- .resolve():
+- **resolve()** tells the Promise that it was successful.
+- That value can later be accessed using **.then()**.
+
+## 2- .reject():
+- **reject()** tells the Promise that something is wrong.
+- The rejection reason can be accessed using **.catch()**.
+
+## 3- .then():
+- **.then()** is used when the Promise is fulfilled successfully.
+
+## 4- .catch()
+- **.catch()** handles a rejected Promise.
+
+## 5- .finally():
+- **.finally()** runs regardless of whether the Promise succeeds or fails.
+
  
 ## AWAIT:
 **=> " await tells JavaScript TO Wait for the Promise to finish before continuing the async function. "**

@@ -1,27 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAVA-SCRIPT ASYNC PRACTICE PROJECT</title>
+    <!----------------------- STYLING ----------------------->
     <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .async-operation {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      button {
+        padding: 6px 15px;
+        border-radius: 15px;
+        margin: 0 10px;
+      }
+      .async-div {
+        width: 80%;
+        height: 60%;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
 
-        body {
-            background-color: #414141;
-        }
-        
+      .async-function {
+        text-align: center;
+        max-width: 90%;
+        width: 500px;
+        padding: 20px;
+        background-color: antiquewhite;
+        border-radius: 15px;
+        margin-bottom: 50px;
+      }
+
+      hr {
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
 
+  <body>
+
+<!------------------------------------------>
     <div class="async-operation">
-        <h1>Asynchronous Operation</h1>
-        <h2>SetTimeOut()</h2>
+
+      <h1>Asynchronous Operation</h1>
+
+      <h2>SetTimeOut()</h2>
+
+      <div>
         <button id="start">Start</button>
         <button id="stop">Stop</button>
+      </div>
+
+      <div class="async-div"></div>
+      
+    </div>
+    
+<!------------------------------------------>
+    <hr>
+    <div class="async-function">
+
+        <h1>async-function</h1>
+        
+        <h2>Working with " await " and " fetch() "</h2>
+        
+        <p id="para"></p>
+
+        <button id="btn">Generate New Fact</button>
     </div>
 
-    <div class="async-function"></div>
 
-</body>
+
+    
+
+    <!----------------------- JAVA-SCRIPT ----------------------->
+    <script>
+
+      // asynchronous operation using setTimeInterval()
+      const asyncDiv = document.querySelector(".async-div");
+      const startBtn = document.querySelector("#start");
+      const stopBtn = document.querySelector("#stop");
+
+      // Random hex code generator
+      let genNumber = () => {
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 16)];
+        }
+
+        return color;
+      };
+
+      let intervalId;
+
+      // Random color generate when clicked on start button
+      startBtn.addEventListener("click", () => {
+        let changeBg = () => {
+          asyncDiv.style.backgroundColor = genNumber();
+        };
+
+        if (!intervalId) {
+          intervalId = setInterval(changeBg, 1000);
+        }
+      });
+
+      // To stop the interval when clicked on stop button
+      stopBtn.addEventListener("click", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+      });
+
+     //Using async function with "await" and "fetch()"  
+
+     let btn = document.querySelector("#btn");
+     let url = "https://catfact.ninja/fact";
+
+     let getFacts = async () => {
+        let response = await fetch (url);
+        let resJson = await response.json();
+        console.log(resJson.fact);
+        let facts = document.querySelector("#para");
+        para.innerHTML = resJson.fact;
+     }
+
+     getFacts();
+
+     btn.addEventListener('click', () => {
+        getFacts();
+     })
+
+    </script>
+  </body>
 </html>

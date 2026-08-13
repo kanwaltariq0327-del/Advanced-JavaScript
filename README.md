@@ -135,13 +135,15 @@ Now when we click the **button** the event will not reach it's parent.
 ### What is a Promise?
 **=> " A Promise represents a value that we don't have right now, but will have later. "**
 - It goes like this:
-   - JavaScript requests data
-        ↓
-   - Promise
-        ↓
-   - Server processes it
-        ↓
-   - Data arrives
+   You request data
+      ↓
+   Promise
+      ↓
+   Waiting...
+      ↓
+Server responds
+      ↓
+Success / Failure
  
 ## AWAIT:
 **=> " await tells JavaScript TO Wait for the Promise to finish before continuing the async function. "**

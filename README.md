@@ -103,9 +103,13 @@ Now when we click the **button** the event will not reach it's parent.
 ### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)
 
 # Async JavaScript fundamentals:
-#### " JavaScript is an asynchronous language. "
+#### " JavaScript is a synchronous language. "
 - JavaScript itself is primarily **single-threaded** and **synchronous**.
 - JavaScript can perform **asynchronous** operations using features provided by its environment, such as the browser or Node.js.
+- 
+## setTimeout() and setInterval():
+- These operations are asynchronous operations and can be performed by JavaScript
+- #### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [EXERCISE-2](******)
 
 ## JavaScript async Functions:
 **=> " async function is a function that can perform a task that takes some time without stopping the rest of the program from continuing. "**
@@ -113,14 +117,14 @@ Now when we click the **button** the event will not reach it's parent.
 - An *async* function always returns a **Promise**.
 
 #### For Example:
-- A simple function runs like this:
+- A **simple function** runs like this:
 -> ```function greet() {
          return "Hello";
       }
       console.log(greet());```
 - This runs immediately printing " Hello ".
 
-- An async function runs like this:
+- An **async function** runs like this:
 -> ```async function greet() {
          return "Hello";
       }
@@ -138,6 +142,20 @@ Now when we click the **button** the event will not reach it's parent.
    - Server processes it
         ↓
    - Data arrives
+ 
+## AWAIT:
+**=> " await tells JavaScript TO Wait for the Promise to finish before continuing the async function. "**
+
+#### For Example:
+
+-> ```async function getData() {
+           const response = await fetch("https://example.com/data");
+           console.log(response);
+     }```
+
+- Here await fetch ( ... ) means to wait for **fetch()** to complete, then put its result inside *response*.
+- The need for **async and await** is for one of the most common uses in **fetching data from an API**.
+- we generally use await inside an async function.
 
 
 

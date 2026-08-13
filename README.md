@@ -102,6 +102,43 @@ Now when we click the **button** the event will not reach it's parent.
 
 ### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](******)
 
+# Async JavaScript fundamentals:
+#### " JavaScript is an asynchronous language. "
+- JavaScript itself is primarily **single-threaded** and **synchronous**.
+- JavaScript can perform **asynchronous** operations using features provided by its environment, such as the browser or Node.js.
+
+## JavaScript async Functions:
+**=> " async function is a function that can perform a task that takes some time without stopping the rest of the program from continuing. "**
+- We can create an **asynchronous** function by putting *async* before a function
+- An *async* function always returns a **Promise**.
+
+#### For Example:
+- A simple function runs like this:
+-> ```function greet() {
+         return "Hello";
+      }
+      console.log(greet());```
+- This runs immediately printing " Hello ".
+
+- An async function runs like this:
+-> ```async function greet() {
+         return "Hello";
+      }
+      console.log(greet());```
+- This will print a Promise: " Promise { "Hello" } ".
+
+## PROMISE:
+### What is a Promise?
+**=> " A Promise represents a value that we don't have right now, but will have later. "**
+- It goes like this:
+   - JavaScript requests data
+        ↓
+   - Promise
+        ↓
+   - Server processes it
+        ↓
+   - Data arrives
+
 
 
 

@@ -100,7 +100,7 @@ Sometimes we don't want the event to continue travelling so, we use stopPropagat
       
 Now when we click the **button** the event will not reach it's parent.
 
-### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [EXERCISE-1](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/EXERCISE-1/index.html)
+### JAVA-SCRIPT EVENTS PRACTICE PROJECT IN  [JS-EVENTS](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JS-EVENTS/index.html)
 
 # Async JavaScript fundamentals:
 #### " JavaScript is a synchronous language. "
@@ -140,7 +140,7 @@ Now when we click the **button** the event will not reach it's parent.
   -> ```fetch(url)```
 - fetch doesn't immediately give us the data instead it always returns a Promise.
 
-### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [JavaScript-Async](https://kanwaltariq0327-del.github.io/Advanced-JavaScript//index.html)
+### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [JavaScript-Async](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JavaScript-Async/index.html)
 
 ## PROMISE:
 ### What is a Promise?
@@ -296,7 +296,7 @@ let myCar = new Car("Tesla");```
 ### The Prototype Link:
 - Every object in JavaScript has a hidden internal property, commonly accessed via **__proto__** or **Object.getPrototypeOf()**, that points to its prototype object.
 
-### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JavaScript-Async](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JavaScript-Async)
+### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JS-Prototype](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JS-Prototype)
 
 
 ## 4.Instances

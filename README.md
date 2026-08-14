@@ -109,7 +109,6 @@ Now when we click the **button** the event will not reach it's parent.
 
 ## setTimeout( ) and setInterval( ):
 - These operations are asynchronous operations and can be performed by JavaScript
-- #### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [EXERCISE-2](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/EXERCISE-2/index.html)
 
 ## JavaScript async Functions:
 **=> " async function is a function that can perform a task that takes some time without stopping the rest of the program from continuing. "**
@@ -141,6 +140,7 @@ Now when we click the **button** the event will not reach it's parent.
   -> ```fetch(url)```
 - fetch doesn't immediately give us the data instead it always returns a Promise.
 
+### JAVA-SCRIPT ASYNC PRACTICE PROJECT IN  [JavaScript-Async](https://kanwaltariq0327-del.github.io/Advanced-JavaScript//index.html)
 
 ## PROMISE:
 ### What is a Promise?
@@ -229,6 +229,7 @@ Now when we click the **button** the event will not reach it's parent.
 - In JavaScript, an object is a standalone, non-primitive data structure that stores related data as a collection of key-value pairs.
 - An object serves as a structural container to group complex data and behavior together.
 - it is consist of Properties and Method.
+- 
 #### For Example:
 -> ```// Creating a user object
 const user = {
@@ -242,7 +243,7 @@ const user = {
   }
 };```
 
-### Object Literals:
+## Object Literals:
 - Objects are typically created using curly braces {}, known as an object literal.
 
 ## .this:
@@ -255,14 +256,14 @@ const user = {
 - In order to clear out the messed up code by putting them in object to make it more readable and to work more efficiently.
 - We can organise our code by using more features using OOP.
 
-## Important Parts of OOP:
+# Important Parts of OOP:
 
-### 1.Classes
+## 1.Classes:
 - A class is like a blueprint for creating objects.
 - It bundles data and behaviours together into a single logical unit
 - While a class defines the structure, it does not consume memory until we instantiate it to create an "object".
 
-### 2.Constructor Function:
+## 2.Constructor Function:
 
 - A constructor Function is a special method that automatically initialises a newly created object.
 - A class can have a special method called constructor( ).
@@ -282,19 +283,37 @@ const user = {
 let myCar = new Car("Tesla");```
 
 
-### 2.Prototypes
-### 4.Instances
+## 3.Prototypes:
+- JavaScript have a prototype based behaviour.
+- Everything in JavaScript is an Object itself -> Array, String, function etc.
+
+### The Prototype Chain:
+- In JavaScript, objects inherit properties and methods directly from other objects through a mechanism called the prototype chain.
+- When we try to access a property or a method on an object, JavaScript first looks at the object itself. If it is not found, it travels up the chain to the prototype, and continues upward until it finds the property or hits null.
+- Instead of copying methods into every new object instance, instances share a single reference to the methods defined on their prototype
+- Through Prototype Chaining memory can be saved because the method is stored on the shared prototype rather than separately on every object.
+
+### The Prototype Link:
+- Every object in JavaScript has a hidden internal property, commonly accessed via **__proto__** or **Object.getPrototypeOf()**, that points to its prototype object.
+
+### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JavaScript-Async](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JavaScript-Async)
+
+
+## 4.Instances
 
 ## The Main Concepts of OOP:
 - Classes are the vehicle through which the four primary pillars of Object-Oriented Programming are achieved
 
 ### 1.Encapsulation
 - Encapsulation keeps related data and functionality together and controls how that data can be accessed or changed.
+
 ### 2.Abstraction
 - Abstraction hides complicated implementation details and shows only what the user needs.
+
 ### 3.Inheritance
 - In Inheritance, one class can inherit properties and methods from another class.
 - The keyword *extends* is used for **inheritance**.
+  
 ### 4.Polymorphism
 - The word polymorphism basically means **" Many forms ".**
 - Different objects can have a method with the same name but behave differently.

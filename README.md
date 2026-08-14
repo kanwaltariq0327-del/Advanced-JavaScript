@@ -296,7 +296,7 @@ let myCar = new Car("Tesla");```
 ### The Prototype Link:
 - Every object in JavaScript has a hidden internal property, commonly accessed via **__proto__** or **Object.getPrototypeOf()**, that points to its prototype object.
 
-### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JS-Prototype](https://kanwaltariq0327-del.github.io/Advanced-JavaScript/JS-Prototype)
+### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JS-Prototype](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/blob/main/JS-Prototype/main.js)
 
 
 ## 4.Instances

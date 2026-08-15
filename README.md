@@ -153,7 +153,7 @@ Now when we click the **button** the event will not reach it's parent.
    - Success / Failure
 - A Promise does not reject on **HTTP errors** ( 404 etc ) instead a then( ) handler must check response.
  
-## States of Promise"
+## States of Promise:
 - A Promise has three possible states:
    - **pending**: Operation is still running
    - **fulfilled**: Operation succeeded
@@ -298,7 +298,8 @@ let myCar = new Car("Tesla");```
 
 ## __proto__ :
 - __proto__ is a property that lets you access an object's prototype.
-- 
+
+
 #### For Example:
 -> ```const person = {
     name: "Ali"
@@ -349,9 +350,11 @@ console.log(person.__proto__);```
 | Encapsulation | Keep data and functionality together/control access |
 | Abstraction | Hide complicated details |
 | Inheritance | One class gets features from another |
-| Polymorphism | Same method name, different behavior |
+| Polymorphism | Same method name, different behaviour |
 | extends | Used for inheritance |
 | new | Creates an object from a class |
+
+# GETTER AND SETTER:
 
 	
 	

@@ -262,6 +262,7 @@ const user = {
 - A class is like a blueprint for creating objects.
 - It bundles data and behaviours together into a single logical unit
 - While a class defines the structure, it does not consume memory until we instantiate it to create an "object".
+- Classes are largely a cleaner syntax for working with JavaScript's prototype-based inheritance.	
 
 ## 2.Constructor Function:
 
@@ -292,14 +293,30 @@ let myCar = new Car("Tesla");```
 - When we try to access a property or a method on an object, JavaScript first looks at the object itself. If it is not found, it travels up the chain to the prototype, and continues upward until it finds the property or hits null.
 - Instead of copying methods into every new object instance, instances share a single reference to the methods defined on their prototype
 - Through Prototype Chaining memory can be saved because the method is stored on the shared prototype rather than separately on every object.
-
-### The Prototype Link:
 - Every object in JavaScript has a hidden internal property, commonly accessed via **__proto__** or **Object.getPrototypeOf()**, that points to its prototype object.
 
-### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLAINATION IN  [JS-Prototype](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/blob/main/JS-Prototype/main.js)
+
+## __proto__ :
+- __proto__ is a property that lets you access an object's prototype.
+- 
+#### For Example:
+-> ```const person = {
+    name: "Ali"
+};
+console.log(person.__proto__);```
+
+- In the above example we can say that **person.__proto__ === person.prototype**
+
+## 4.Instances:
+- Instance is a specific object created from a class or a constructor function.
+- A class as a blueprint and an instance is the actual object built from that blueprint.
+- Instances can be created using the " new " keyword.
 
 
-## 4.Instances
+### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLANATION IN  [JS-Prototype](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/blob/main/JS-Prototype/main.js)
+
+
+
 
 ## The Main Concepts of OOP:
 - Classes are the vehicle through which the four primary pillars of Object-Oriented Programming are achieved
@@ -311,7 +328,7 @@ let myCar = new Car("Tesla");```
 - Abstraction hides complicated implementation details and shows only what the user needs.
 
 ### 3.Inheritance
-- In Inheritance, one class can inherit properties and methods from another class.
+- In Inheritance, one class/object can inherit properties and methods from another class/object.
 - The keyword *extends* is used for **inheritance**.
   
 ### 4.Polymorphism

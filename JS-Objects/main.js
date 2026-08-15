@@ -141,3 +141,23 @@ console.log(newPerson === Teacher); //output -> false ---> it's not the same bec
 console.log(newPerson instanceof Teacher); //output -> true
 console.log(newPerson instanceof Username1);  //output -> true
 
+
+// GETTER and SETTER
+class User1 {
+    constructor(email, password){
+        this.email = email,
+        this.password = password
+    }
+
+    get password() {
+        return `${this._password}abc`
+    }
+
+    set password(value) {
+        this._password = value
+    }
+}
+
+const sara = new User1("sara0327@gamil.com", "123")
+console.log(sara.password);  //output -> 123abc
+

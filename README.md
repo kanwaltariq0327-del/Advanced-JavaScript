@@ -400,6 +400,26 @@ console.log(person.__proto__);```
 - This causes an infinite loop recursion crash **(Maximum call stack size exceeded)**.
 - Use an internal alias like *_name* or a private field *#name* instead.
 
+# Lexical Scope And Closures:
+
+## LEXICAL SCOPE:
+**=> " A function can access variables based on where it is written in the code, not where it is called. "**
+- Scope = where variables are accessible.
+- Lexical = determined by where the code is written.
+- lexical scope means JavaScript decides what variables a function can use by looking at where the function is defined in the source code, not where it's executed.
+
+## CLOSURE:
+**=> " A closure is the combination of function bundled together ( enclosed ) with references to it's surrounding state. "**
+- A closure gives us access to an outer function's scope from an inner function.
+- A closure is created when an inner function retains access to the variables of its outer (lexical) scope, even after the outer function has returned.
+#### Basic key points:
+- inner function can have access to outer function.
+- outer function does not have access to inner function.
+- sibling inner functions can also not have access to each other.
+
+### JAVA-SCRIPT LEXICAL SCOPE & CLOSURE PRACTICE IN  [Lexical-Scope&Closures](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/blob/main/Lexical-Scope&Closures/main.js)
+
+
 # ARRAYS:
 
 ## beyond the basics
@@ -415,8 +435,10 @@ console.log(person.__proto__);```
 - Causing severe performance penalties and inconsistent method behaviours.
 
 #### How Holey Arrays are Created:
+
 -> ```// 1. Array constructor with a predefined length
 const arr1 = new Array(3); // [empty × 3]```
+
 -> ```// 2. Assigning an index past the current length
 const arr2 = [1, 2, 3];
 arr2[6] = 7; // [1, 2, 3, empty × 3, 7]```

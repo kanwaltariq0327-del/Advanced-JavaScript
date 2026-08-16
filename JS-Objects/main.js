@@ -142,6 +142,11 @@ console.log(newPerson instanceof Teacher); //output -> true
 console.log(newPerson instanceof Username1);  //output -> true
 
 
+
+
+
+
+
 // GETTER and SETTER
 class User1 {
     constructor(email, password){

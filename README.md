@@ -356,8 +356,97 @@ console.log(person.__proto__);```
 
 # GETTER AND SETTER:
 
-	
-	
+## Get:
+**=> " A *get* is a special method that runs when you read/access a property. "**
+#### Syntax:
+
+-> ```get propertyName() {
+    // code
+}```
+
+## Set:
+**=> "A *set* is a special method that runs when you assign a value to a property. "**
+#### Syntax:
+- The real power of setters is that you can validate data before changing it.
+
+-> ```set propertyName(value) {
+    // code
+}```
+
+- Usually getter and setter are to be seen together.
+- The biggest reason we use getters and setters is **encapsulation**.
+- Instead of allowing outside code to freely manipulate our object's internal data.
+- We can control what happens with the help of get and set.
+- Setters can filter or sanitise data before it gets stored in the object.
+- In other words:
+   - Getter: controls how a property is read.
+   - Setter: controls how a property is changed.
+ 
+## Core Comparison:
+
+| Feature | Getter (get) | Setter (set) |
+| -------- | -------- | -------- |
+| Purpose | Retrieves a computed value | Modifies or validates a value |
+| Parameters | Accepts zero parameters | Accepts exactly one parameter |
+| Invocation | Triggered via reading (obj.prop) | Triggered via assignment (obj.prop = val) |
+| Return Value |  Must return a value | Usually returns nothing (void) |
+
+
+### NOTE: 
+-Never use the exact same variable name inside the getter/setter function as the getter/setter name itself 
+#### For Example:
+-> get name() { return this.name; } 
+
+- This causes an infinite loop recursion crash **(Maximum call stack size exceeded)**.
+- Use an internal alias like *_name* or a private field *#name* instead.
+
+# ARRAYS:
+
+## beyond the basics
+
+#### Two types of arrays can be found:
+
+## 1.Holey Arrays:
+**=> " A holey array (also called a sparse array) is a JavaScript array that contains **empty slots** or **"holes"** at non-contiguous index positions. "**
+
+- It Is an array that contains empty slots or "holes" at non-contiguous index positions.
+- These empty slots are fundamentally different from positions explicitly filled with undefined or null values, they represent missing keys entirely.
+- JavaScript engines like V8 (Node.js & Chrome) distinguish these from "packed" (dense) arrays.
+- Causing severe performance penalties and inconsistent method behaviours.
+
+#### How Holey Arrays are Created:
+-> ```// 1. Array constructor with a predefined length
+const arr1 = new Array(3); // [empty × 3]```
+-> ```// 2. Assigning an index past the current length
+const arr2 = [1, 2, 3];
+arr2[6] = 7; // [1, 2, 3, empty × 3, 7]```
+
+
+## 2. Continuous -> Packed Elements
+**=> "an array where all elements are dense and contiguous, meaning every single index from 0 to array.length - 1 contains a valid value and there are no missing slots or "holes". "**
+- It can store any data type i.e ( integers, floating, string )
+
+#### For Example:
+-> ```const arr = [1, 2, 3, 6.0, "7"]```
+
+#### Both of these array types can be available in further three kinds:
+- SMI ( Small Integers )
+   - This type restrictively only has numbers in it, not even decimals numbers.
+   - SMI can also be as a Packed Array Elements and a Holey Array Elements.
+
+- Double ( floating, string, function )
+   - these are ```[6.0, 7.1]``` 
+   - Once Double is added in the array it will not be optimised back into SMI.
+ 
+### Highest Optimisation:
+- In Continous -> SMI > Double > Packed Elements
+- In Holey -> H_SMI > H_Double > H_Packed Elements
+
+**=> Once it s Downgraded it will not be Upgraded.*
+
+
+
+         
 
 
 

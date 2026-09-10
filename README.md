@@ -314,7 +314,7 @@ console.log(person.__proto__);```
 - Instances can be created using the " new " keyword.
 
 
-### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLANATION IN  [JS-Prototype](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/JS-Objects/main.js)
+### JAVA-SCRIPT PROTOTYPE PRACTICE AND SIMPLE EXPLANATION IN  [JS-Prototype](https://github.com/kanwaltariq0327-del/Advanced-JavaScript/blob/main/JS-Objects/main.js)
 
 
 

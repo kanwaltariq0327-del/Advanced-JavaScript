@@ -12,16 +12,16 @@
 ## Events Handling Function:
 **=> " addEventListener() is the most common way to handle events. "**
 
--> ```element.addEventListener("event", function () {
-         // code to execute
-    });```
+         element.addEventListener("event", function () {
+                  // code to execute
+         });
     
 #### For Example:
 
--> ```const button = document.querySelector("#button");
-      button.addEventListener("click", () => {
-            alert("Hello!");
-      });```
+         const button = document.querySelector("#button");
+         button.addEventListener("click", () => {
+                  alert("Hello!");
+         });
 
 In Short: **Event happens → JavaScript detects it → JavaScript runs some code**
 
@@ -53,9 +53,9 @@ In Short: **Event happens → JavaScript detects it → JavaScript runs some cod
 
 #### For Example:
 
--> ```button.addEventListener("click", (event) => {
-          console.log(event);
-      });```
+         button.addEventListener("click", (event) => {
+                  console.log(event);
+         });
 
 **- We can use to find information such as:**
    
@@ -76,27 +76,27 @@ In Short: **Event happens → JavaScript detects it → JavaScript runs some cod
 - even if we don't write it **false** is the default behaviour.
 
 #### For Example:
--> ```child.addEventListener("click", (event) => {
-           console.log("Button clicked");   
-      }, false);```
+         child.addEventListener("click", (event) => {
+                  console.log("Button clicked");   
+         }, false);
   
 #### 2.Capturing Phase:
 - The event travels from the outermost element toward the element that was clicked.
 - JavaScript can detect it if we write **true** in the code.
 
 #### For Example:
--> ```child.addEventListener("click", (event) => {
-           console.log("Button clicked");
-       }, true);```
+         child.addEventListener("click", (event) => {
+                  console.log("Button clicked");
+         }, true);
 
 ## stopPropagation()
 
 Sometimes we don't want the event to continue travelling so, we use stopPropagation()
 
--> ```child.addEventListener("click", (event) => {
-          event.stopPropagation();
-          console.log("Button clicked");
-      });```
+         child.addEventListener("click", (event) => {
+                  event.stopPropagation();
+                  console.log("Button clicked");
+         });
       
 Now when we click the **button** the event will not reach it's parent.
 
@@ -117,17 +117,21 @@ Now when we click the **button** the event will not reach it's parent.
 
 #### For Example:
 - A **simple function** runs like this:
--> ```function greet() {
-         return "Hello";
-      }
-      console.log(greet());```
+
+         function greet() {
+                  return "Hello";
+         }
+         console.log(greet());
+  
 - This runs immediately printing " Hello ".
 
 - An **async function** runs like this:
--> ```async function greet() {
-         return "Hello";
-      }
-      console.log(greet());```
+
+         async function greet() {
+                  return "Hello";
+         }
+         console.log(greet());
+  
 - This will print a Promise: " Promise { "Hello" } ".
 
 
@@ -161,10 +165,10 @@ Now when we click the **button** the event will not reach it's parent.
 
 ### A Basic Syntax in creating a Promise:
 
--> ```const promise = new Promise((resolve, reject) => {
-    // asynchronous operation
-     resolve();
-    });```
+         const promise = new Promise((resolve, reject) => {
+                  // asynchronous operation
+                  resolve();
+         });
 
     
 - The Promise constructor receives a function called the executor function.
@@ -172,14 +176,14 @@ Now when we click the **button** the event will not reach it's parent.
 
 #### For Example:
 
--> ```const promise = new Promise((resolve, reject) => {
-          let success = true;
-          if (success) {
-               resolve("Operation successful!");
-          } else {
-               reject("Operation failed!");
-          }
-      });```
+         const promise = new Promise((resolve, reject) => {
+                  let success = true;
+                  if (success) {
+                           resolve("Operation successful!");
+                  } else {
+                           reject("Operation failed!");
+                  }
+         });
 
 - If success is **true**, the Promise becomes **fulfilled**
 - If it's false then **rejected**
@@ -208,10 +212,10 @@ Now when we click the **button** the event will not reach it's parent.
 
 #### For Example:
 
--> ```async function getData() {
-           const response = await fetch("https://example.com/data");
-           console.log(response);
-     }```
+         async function getData() {
+                  const response = await fetch("https://example.com/data");
+                  console.log(response);
+         }
 
 - Here await fetch ( ... ) means to wait for **fetch()** to complete, then put its result inside *response*.
 - The need for **async and await** is for one of the most common uses in **fetching data from an API**.
@@ -231,17 +235,17 @@ Now when we click the **button** the event will not reach it's parent.
 - it is consist of Properties and Method.
 - 
 #### For Example:
--> ```// Creating a user object
-const user = {
-  name: "Alice",                 // Property (String)
-  age: 28,                       // Property (Number)
-  isAdmin: true,                 // Property (Boolean)
-  hobbies: ["chess", "coding"],  // Property (Array/Object)
-  // Method
-  greet: function() {
-    console.log("Hello, my name is " + this.name);
-  }
-};```
+         // Creating a user object
+         const user = {
+                  name: "Alice",                 // Property (String)
+                  age: 28,                       // Property (Number)
+                  isAdmin: true,                 // Property (Boolean)
+                  hobbies: ["chess", "coding"],  // Property (Array/Object)
+                           // Method
+                  greet: function() {
+                           console.log("Hello, my name is " + this.name);
+                  }
+         };
 
 ## Object Literals:
 - Objects are typically created using curly braces {}, known as an object literal.
@@ -274,14 +278,14 @@ const user = {
 - It always gives us a new instance.
  
 #### Basic Syntax and Example:
--> ```class Car {
-    // Constructor
-    constructor(modelName) {
-        this.model = modelName;
-    }
-}
-// Usage
-let myCar = new Car("Tesla");```
+         class Car {
+                  // Constructor
+                  constructor(modelName) {
+                           this.model = modelName;
+                  }
+         }
+         // Usage
+         let myCar = new Car("Tesla");
 
 
 ## 3.Prototypes:
@@ -301,10 +305,10 @@ let myCar = new Car("Tesla");```
 
 
 #### For Example:
--> ```const person = {
-    name: "Ali"
-};
-console.log(person.__proto__);```
+         const person = {
+                  name: "Ali"
+         };
+         console.log(person.__proto__);
 
 - In the above example we can say that **person.__proto__ === person.prototype**
 
@@ -360,18 +364,18 @@ console.log(person.__proto__);```
 **=> " A *get* is a special method that runs when you read/access a property. "**
 #### Syntax:
 
--> ```get propertyName() {
-    // code
-}```
+         get propertyName() {
+                  // code
+         }
 
 ## Set:
 **=> "A *set* is a special method that runs when you assign a value to a property. "**
 #### Syntax:
 - The real power of setters is that you can validate data before changing it.
 
--> ```set propertyName(value) {
-    // code
-}```
+         set propertyName(value) {
+                  // code
+         }
 
 - Usually getter and setter are to be seen together.
 - The biggest reason we use getters and setters is **encapsulation**.
@@ -395,7 +399,9 @@ console.log(person.__proto__);```
 ### NOTE: 
 -Never use the exact same variable name inside the getter/setter function as the getter/setter name itself 
 #### For Example:
--> get name() { return this.name; } 
+         get name() { 
+                  return this.name; 
+         } 
 
 - This causes an infinite loop recursion crash **(Maximum call stack size exceeded)**.
 - Use an internal alias like *_name* or a private field *#name* instead.
@@ -435,13 +441,16 @@ console.log(person.__proto__);```
 - Causing severe performance penalties and inconsistent method behaviours.
 
 #### How Holey Arrays are Created:
+1:
 
--> ```// 1. Array constructor with a predefined length
-const arr1 = new Array(3); // [empty × 3]```
+         // 1. Array constructor with a predefined length
+         const arr1 = new Array(3); // [empty × 3]
+         
+2:
 
--> ```// 2. Assigning an index past the current length
-const arr2 = [1, 2, 3];
-arr2[6] = 7; // [1, 2, 3, empty × 3, 7]```
+         // 2. Assigning an index past the current length
+         const arr2 = [1, 2, 3];
+         arr2[6] = 7;  // [1, 2, 3, empty × 3, 7]
 
 
 ## 2. Continuous -> Packed Elements
@@ -449,7 +458,7 @@ arr2[6] = 7; // [1, 2, 3, empty × 3, 7]```
 - It can store any data type i.e ( integers, floating, string )
 
 #### For Example:
--> ```const arr = [1, 2, 3, 6.0, "7"]```
+         const arr = [1, 2, 3, 6.0, "7"]
 
 #### Both of these array types can be available in further three kinds:
 - SMI ( Small Integers )
